@@ -10,7 +10,18 @@ $ make brain-even
 
 # при победе Congratulations, userName!
 # при правильном ответе Correct!
-# при проигрыше 'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, userName!
+# при проигрыше 'userNumber' is wrong answer ;(. Correct answer was 'correctNumber'. Let's try again, userName!
 
 # Запуск игры "Калькулятор"
 $ make brain-calc
+
+# при победе Congratulations, userName!
+# при правильном ответе Correct!
+# при проигрыше 'userNumber' is wrong answer ;(. Correct answer was 'correctNumber'. Let's try again, userName!
+
+# Запуск игры "Нод"
+$ make brain-gcd
+
+# при победе Congratulations, userName!
+# при правильном ответе Correct!
+# при проигрыше 'userNumber' is wrong answer ;(. Correct answer was 'correctNumber'. Let's try again, userName!
