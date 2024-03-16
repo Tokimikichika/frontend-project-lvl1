@@ -1,3 +1,3 @@
-import playEvenGame from '../scr/playEvenGame.js';
+import { playEvenGame } from '../scr/games/index.js';
 
 playEvenGame();
