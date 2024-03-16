@@ -98,4 +98,48 @@ const playGcdGame = () => {
   }
 };
 
-export { playEvenGame, playCalcGame, playGcdGame };
+const generateProgression = (randomLength, startNumber, diff) => {
+  
+  const progression = [];
+  for (let i = 0; i < randomLength; i += 1) {
+    progression.push(startNumber);
+    startNumber += diff;
+  }
+  return progression;
+} 
+const hideEl = (progression, index) => {
+  const hiddenProgression = [...progression];
+  hiddenProgression[index] = '..';
+  return hiddenProgression.join(' ');
+}
+
+const playProgressiveGame = () => {
+  const { name } = askQuestion('What number is missing in the progression?');
+
+  let countAnswer = 0;
+  for (let i = 0; i < 3; i += 1) {
+    const randomLength = Math.floor(Math.random() * 5) + 5;
+    const startNumber = Math.floor(Math.random() * 10) + 1;
+    const diff = Math.floor(Math.random() * 10) + 1;
+    const progression = generateProgression(randomLength, startNumber, diff); 
+    const index = Math.floor(Math.random() * progression.length);
+    const question = hideEl(progression, index)
+
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    const correctAnswer = String(progression[index])
+
+    if (checkAnswer(userAnswer, correctAnswer, name)) {
+      countAnswer += 1;
+    } else {
+      break;
+    }
+  }
+  if (countAnswer === 3) {
+    console.log(`Congratulations, ${name}!`);
+  }
+};
+
+
+
+export { playEvenGame, playCalcGame, playGcdGame, playProgressiveGame};
