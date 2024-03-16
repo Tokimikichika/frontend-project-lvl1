@@ -32,3 +32,10 @@ $ make brain-progression
 # при победе Congratulations, userName!
 # при правильном ответе Correct!
 # при проигрыше 'userNumber' is wrong answer ;(. Correct answer was 'correctNumber'. Let's try again, userName!
+
+# Запуск игры "Простое ли число?"
+$ make brain-prime
+
+# при победе Congratulations, userName!
+# при правильном ответе Correct!
+# при проигрыше 'userNumber' is wrong answer ;(. Correct answer was 'correctNumber'. Let's try again, userName!

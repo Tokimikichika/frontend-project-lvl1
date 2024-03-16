@@ -138,7 +138,37 @@ const playProgressiveGame = () => {
     console.log(`Congratulations, ${name}!`);
   }
 };
+const isPrime = (num) => {
+  if (num <= 1) return 'no';
+  for (let i = 2; i < Math.sqrt(num); i += 1) {
+    if (num % i === 0) {
+      return 'no';
+    }
+  }
+  return 'yes';
+};
+
+const playPrimeNumberGame = () => {
+  const { name } = askQuestion('Answer "yes" if given number is prime. Otherwise answer "no".');
+
+  let countAnswer = 0;
+  for (let i = 0; i < 3; i += 1) {
+    const num = Math.floor(Math.random() * 991) + 1;
+    const correctAnswer = isPrime(num);
+    console.log(`Question: ${num}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+
+    if (checkAnswer(userAnswer, correctAnswer, name)) {
+      countAnswer += 1;
+    } else {
+      break;
+    }
+  }
+  if (countAnswer === 3) {
+    console.log(`Congratulations, ${name}!`);
+  }
+};
 
 export {
-  playEvenGame, playCalcGame, playGcdGame, playProgressiveGame,
+  playEvenGame, playCalcGame, playGcdGame, playProgressiveGame, playPrimeNumberGame,
 };
