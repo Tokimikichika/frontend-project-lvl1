@@ -1,3 +1,3 @@
-import { playProgressiveGame } from "../scr/games/index.js";
+import { playProgressiveGame } from '../scr/games/index.js';
 
 playProgressiveGame();
