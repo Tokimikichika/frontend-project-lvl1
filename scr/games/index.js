@@ -24,12 +24,17 @@ const checkAnswer = (userAnswer, correctAnswer, name) => {
 const playEvenGame = () => {
   const { name } = askQuestion('Answer "yes" if the number is even, otherwise answer "no".');
   let countAnswer = 0;
-  for (let i = 0; i < 3; i += 1) {
-    const num = Math.floor(Math.random() * 99) + 1;
-    const correctAnswer = isEven(num) ? 'yes' : 'no';
-    console.log(`Question: ${num}`);
-    const userAnswer = readlineSync.question('Your answer: ');
+  const generateNumber = () => Math.floor(Math.random() * 99) + 1;
 
+  const displayQuestion = (num) => console.log(`Question: ${num}`);
+
+  const getUserAnswer = () => readlineSync.question('Your answer: ');
+
+  for (let i = 0; i < 3; i += 1) {
+    const num = generateNumber();
+    const correctAnswer = isEven(num) ? 'yes' : 'no';
+    displayQuestion(num);
+    const userAnswer = getUserAnswer();
     if (checkAnswer(userAnswer, correctAnswer, name)) {
       countAnswer += 1;
     } else {
