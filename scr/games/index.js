@@ -39,6 +39,19 @@ const playEvenGame = () => {
   console.log(`Congratulations, ${name}!`);
 };
 
+const evalExpression = (expression) => {
+  const [num1, operand, num2] = expression.split(' ');
+  switch (operand) {
+    case '+':
+      return Number(num1) + Number(num2);
+    case '-':
+      return Number(num1) - Number(num2);
+    case '*':
+      return Number(num1) * Number(num2);
+    default:
+      return NaN;
+  }
+};
 const playCalcGame = () => {
   const { name } = askQuestion('What is the result of the expression?');
 
@@ -56,7 +69,7 @@ const playCalcGame = () => {
     const expression = `${num1} ${operand} ${num2}`;
     console.log(`Question: ${expression}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = eval(expression).toString();
+    const correctAnswer = evalExpression(expression).toString();
 
     if (checkAnswer(userAnswer, correctAnswer, name)) {
       countGame += 1;
@@ -100,9 +113,10 @@ const playGcdGame = () => {
 
 const generateProgression = (randomLength, startNumber, diff) => {
   const progression = [];
+  let startNum = startNumber;
   for (let i = 0; i < randomLength; i += 1) {
-    progression.push(startNumber);
-    startNumber += diff;
+    progression.push(startNum);
+    startNum += diff;
   }
   return progression;
 };
