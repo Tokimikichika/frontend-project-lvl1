@@ -23,20 +23,22 @@ const checkAnswer = (userAnswer, correctAnswer, name) => {
 
 const playEvenGame = () => {
   const { name } = askQuestion('Answer "yes" if the number is even, otherwise answer "no".');
-  const numbers = [15, 6, 7];
-
-  for (let i = 0; i < numbers.length; i += 1) {
-    const currentNumber = numbers[i];
-    console.log(`Question: ${currentNumber}`);
+  let countAnswer = 0;
+  for (let i = 0; i < 3; i += 1) {
+    const num = Math.floor(Math.random() * 99) + 1;
+    const correctAnswer = isEven(num) ? 'yes' : 'no';
+    console.log(`Question: ${num}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    const correctAnswer = isEven(currentNumber) ? 'yes' : 'no';
-    if (!checkAnswer(userAnswer, correctAnswer, name)) {
-      return;
+    if (checkAnswer(userAnswer, correctAnswer, name)) {
+      countAnswer += 1;
+    } else {
+      break;
     }
   }
-
-  console.log(`Congratulations, ${name}!`);
+  if (countAnswer === 3) {
+    console.log(`Congratulations, ${name}!`);
+  }
 };
 
 const evalExpression = (expression) => {
