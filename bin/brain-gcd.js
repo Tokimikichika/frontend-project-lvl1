@@ -1,3 +1,4 @@
-import { playGcdGame } from '../scr/games/index.js';
+import { generateRoundGcdGame, rulesGcdGame, runEngine } from '../src/games/index.js';
 
-playGcdGame();
+generateRoundGcdGame();
+runEngine(rulesGcdGame, generateRoundGcdGame);

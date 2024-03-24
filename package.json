@@ -1,8 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Tokimikichika/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Tokimikichika/frontend-project-lvl1/actions)",
-  "main": "index.js",
+  "description": "These are some brain training games.",
   "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",
@@ -12,10 +11,6 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "readline-sync": "^1.4.10"

@@ -1,3 +1,4 @@
-import { playCalcGame } from '../scr/games/index.js';
+import { generateRoundCalcGame, rulesCalcGame, runEngine } from '../src/games/index.js';
 
-playCalcGame();
+generateRoundCalcGame();
+runEngine(rulesCalcGame, generateRoundCalcGame);

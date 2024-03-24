@@ -1,3 +1,4 @@
-import { playEvenGame } from '../scr/games/index.js';
+import { generateRoundEvenGame, rulesEvenGame, runEngine } from '../src/games/index.js';
 
-playEvenGame();
+generateRoundEvenGame();
+runEngine(rulesEvenGame, generateRoundEvenGame);

@@ -1,3 +1,6 @@
-import { playProgressiveGame } from '../scr/games/index.js';
+import {
+  runEngine, rulesProgressionGame, generateRoundProgressiveGame,
+} from '../src/games/index.js';
 
-playProgressiveGame();
+generateRoundProgressiveGame();
+runEngine(rulesProgressionGame, generateRoundProgressiveGame);

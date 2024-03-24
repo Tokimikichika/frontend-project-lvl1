@@ -1,3 +1,4 @@
-import { playPrimeNumberGame } from '../scr/games/index.js';
+import { generateRoundPrimeNumberGame, rulesPrimeGame, runEngine } from '../src/games/index.js';
 
-playPrimeNumberGame();
+generateRoundPrimeNumberGame();
+runEngine(rulesPrimeGame, generateRoundPrimeNumberGame);
