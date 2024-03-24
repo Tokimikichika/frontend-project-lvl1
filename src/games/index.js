@@ -66,7 +66,7 @@ const runEngine = (rules, generateRound) => {
   console.log(rules);
 
   const roundsCount = 3;
-  let i; // Declare the variable outside the loop
+  let i;
   for (i = 0; i < roundsCount; i += 1) {
     const [question, answer] = generateRound();
 
