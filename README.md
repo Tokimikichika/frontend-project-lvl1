@@ -29,7 +29,7 @@
 
 [![asciicast](https://asciinema.org/a/648781.svg)](https://asciinema.org/a/648781)
 
-### Prime numbers
+### Game "Is the number prime?"
 ```make brain-prime```
 
 [![asciicast](https://asciinema.org/a/Lox8U62PTtr2MzsMEbZDktB69.svg)](https://asciinema.org/a/Lox8U62PTtr2MzsMEbZDktB69)
