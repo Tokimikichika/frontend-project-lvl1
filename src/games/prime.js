@@ -12,7 +12,7 @@ const isPrime = (num) => {
 };
 const generateRoundPrimeNumberGame = () => {
   const num = getRandomInRange(1, 100);
-  const question = `${num}`;
+  const question = num;
   const answer = isPrime(num) ? 'yes' : 'no';
   return [question, answer];
 };
