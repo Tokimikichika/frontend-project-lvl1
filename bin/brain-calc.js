@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { generateRoundCalcGame, rulesCalcGame, runEngine } from '../src/games/index.js';
+import runEngine from '../src/games/calc.js';
 
-generateRoundCalcGame();
-runEngine(rulesCalcGame, generateRoundCalcGame);
+runEngine();

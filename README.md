@@ -1,40 +1,36 @@
-# Игры разума
+# Brain Games
 
-## Установка
+## Getting started
 
-1. Склонируйте репозиторий.
+###Clone the repository
 
-git clone https://github.com/Tokimikichika/frontend-project-lvl1.git
+```git clone https://github.com/Tokimikichika/frontend-project-lvl1.git```
 
-2. Установите необходимые зависимости: npm install
+```npm install```
 
-## Использование
 
-Пример использования проекта:
+### Even number
+```make brain-even```
 
-# Запуск игры "Проверка на четность"
-$ make brain-even
+[![asciicast](https://asciinema.org/a/648776.svg)](https://asciinema.org/a/648776)
 
-https://asciinema.org/a/ulwexYV8JBAZCp8BtcZRgTf67
+### Calulator game
+```make brain-calc```
 
-# Запуск игры "Калькулятор"
-$ make brain-calc
+[![asciicast](https://asciinema.org/a/648780.svg)](https://asciinema.org/a/648780)
 
-https://asciinema.org/a/Ufp3rkddAa2njOd66xwD10lbX
+### greatest common divisor (GCD) game
+```make brain-gcd```
 
-# Запуск игры "Нод"
-$ make brain-gcd
+[![asciicast](https://asciinema.org/a/648778.svg)](https://asciinema.org/a/648778)
 
-https://asciinema.org/a/c8atwrHrKGzeRuV26RAmd8dz0
+### Arithmetic progression game
+```make brain-progression```
 
-# Запуск игры "Арифметическая прогрессия"
+[![asciicast](https://asciinema.org/a/648781.svg)](https://asciinema.org/a/648781)
 
-$ make brain-progression
+### Prime numbers
+```make brain-prime```
 
-https://asciinema.org/a/8jJp4VOPV5dlJRr0nAo6nkjGP
-
-# Запуск игры "Простое ли число?"
-$ make brain-prime
-
-https://asciinema.org/a/Lox8U62PTtr2MzsMEbZDktB69
+[![asciicast](https://asciinema.org/a/Lox8U62PTtr2MzsMEbZDktB69.svg)](https://asciinema.org/a/Lox8U62PTtr2MzsMEbZDktB69)
 
