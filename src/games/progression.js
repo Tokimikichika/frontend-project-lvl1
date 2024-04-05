@@ -1,8 +1,6 @@
 import runEngine from '../index.js';
 import getRandomInRange from '../utils.js';
 
-const description = 'What number is missing in the progression?';
-
 const generateProgression = (randomLength, startNumber, diff) => {
   const progression = [];
   let startNum = startNumber;
@@ -12,20 +10,24 @@ const generateProgression = (randomLength, startNumber, diff) => {
   }
   return progression;
 };
-const hideEl = (progression, index) => {
+
+const progressive = (progression, index) => {
   const hiddenProgression = [...progression];
   hiddenProgression[index] = '..';
   return hiddenProgression.join(' ');
 };
-const generateRoundProgressiveGame = () => {
+
+const generateRound = () => {
   const randomLength = getRandomInRange(5, 5);
   const startNumber = getRandomInRange(1, 10);
   const diff = getRandomInRange(1, 10);
   const progression = generateProgression(randomLength, startNumber, diff);
   const index = Math.floor(Math.random() * progression.length);
-  const question = `${hideEl(progression, index)}`;
+  const question = `${progressive(progression, index)}`;
   const answer = String(progression[index]);
   return [question, answer];
 };
 
-export default () => runEngine(description, generateRoundProgressiveGame);
+const description = 'What number is missing in the progression?';
+
+export default () => { runEngine(description, generateRound); };

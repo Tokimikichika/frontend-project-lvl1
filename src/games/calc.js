@@ -1,31 +1,27 @@
 import runEngine from '../index.js';
 import getRandomInRange from '../utils.js';
 
-const operations = ['*', '+', '-'];
-let operationIndex = 0;
-const description = 'What is the result of the expression?';
-
-const generateRoundCalcGame = () => {
-  const num1 = getRandomInRange(1, 25);
-  const num2 = getRandomInRange(1, 25);
-  operationIndex += 1;
-  const operation = operations[operationIndex % operations.length];
-  const question = `${num1} ${operation} ${num2}`;
-  let answer;
-  switch (operation) {
-    case '+':
-      answer = num1 + num2;
-      break;
-    case '-':
-      answer = num1 - num2;
-      break;
-    case '*':
-      answer = num1 * num2;
-      break;
-    default:
-      return false;
-  }
-  return [question, String(answer)];
+const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+  return operators[getRandomInRange(0, operators.length - 1)];
 };
 
-export default () => runEngine(description, generateRoundCalcGame);
+const calculation = (num1, num2, operator) => {
+  switch (operator) {
+    case '+': return num1 + num2;
+    case '-': return num1 - num2;
+    case '*': return num1 * num2;
+    default: throw new Error(`Invalid operator - ${operator}`);
+  }
+};
+const generateRound = () => {
+  const num1 = getRandomInRange();
+  const num2 = getRandomInRange();
+  const operator = getRandomOperator();
+  const question = `${num1} ${operator} ${num2}`;
+  const answer = String(calculation(num1, num2, operator));
+  return [question, answer];
+};
+const description = 'What is the result of the expression?';
+
+export default () => { runEngine(description, generateRound); };

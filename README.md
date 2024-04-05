@@ -1,4 +1,5 @@
 # Brain Games
+[![hexlet-check](https://github.com/Tokimikichika/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Tokimikichika/frontend-project-lvl1/actions/workflows/hexlet-check.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/944d575cc975b5d5853d/maintainability)](https://codeclimate.com/github/Tokimikichika/frontend-project-lvl1/maintainability)
 ## Getting started
 
